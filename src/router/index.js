@@ -4,7 +4,7 @@ const routes = [
   {
     path: '/login',
     name: 'login',
-    component: () => import('../views/account/login.vue'),
+    component: () => import('@/views/account/login.vue'),
     meta: {
       title: '登录',
       beforeResolve(routeTo, routeFrom, next) {
@@ -41,20 +41,20 @@ const router = createRouter({
 })
 
 // Before each route evaluates...
-router.beforeEach(async (routeTo, routeFrom, next) => {
-  //   const authRequired = routeTo.matched.some((route) => route.meta.authRequired)
+// router.beforeEach(async (routeTo, routeFrom, next) => {
+//   //   const authRequired = routeTo.matched.some((route) => route.meta.authRequired)
 
-  //   if (!authRequired) return next()
+//   //   if (!authRequired) return next()
 
-  //   axios.defaults.headers.common['authorization'] = 'Bearer ' + localStorage.getItem('jwt') // for all requests
-  //   await axios.get('https://api-node.themesbrand.website/profile').then((data) => {
-  //     localStorage.setItem('userdata', JSON.stringify(data.data.user))
-  //     localStorage.setItem('userid', data.data.user._id)
-  next()
-  //   }).catch(() => {
-  //     next({ name: 'login', query: { redirectFrom: routeTo.fullPath } })
-  //   });
-})
+//   //   axios.defaults.headers.common['authorization'] = 'Bearer ' + localStorage.getItem('jwt') // for all requests
+//   //   await axios.get('https://api-node.themesbrand.website/profile').then((data) => {
+//   //     localStorage.setItem('userdata', JSON.stringify(data.data.user))
+//   //     localStorage.setItem('userid', data.data.user._id)
+//   next()
+//   //   }).catch(() => {
+//   //     next({ name: 'login', query: { redirectFrom: routeTo.fullPath } })
+//   //   });
+// })
 
 router.beforeResolve(async (routeTo, routeFrom, next) => {
   // Create a `beforeResolve` hook, which fires whenever
