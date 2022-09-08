@@ -127,7 +127,6 @@ const handleDingTalkLogin = () => {
 }
 
 .admin-login-info {
-    @apply flex items-center justify-center my-5 text-gray-300 space-x-2;
     display: flex;
     align-items: center;
     justify-content: center;
