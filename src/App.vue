@@ -1,5 +1,5 @@
 <template>
-  Hello Vue 3 in CodeSandbox!
+  <route-view />
 </template>
 
 <script>
@@ -7,9 +7,3 @@ export default {
   name: "App"
 };
 </script>
-
-<style>
-#app {
-  text-align: center;
-}
-</style>
