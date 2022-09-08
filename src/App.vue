@@ -1,5 +1,5 @@
 <template>
-  <HelloWorld msg="Hello Vue 3 in CodeSandbox!" />
+  <route-view />
 </template>
 
 <script>
@@ -11,6 +11,7 @@ export default {
   },
 };
 </script>
+<<<<<<< HEAD
 
 <style>
 #app {
@@ -28,3 +29,5 @@ export default {
   margin-top: 60px;
 }
 </style>
+=======
+>>>>>>> origin/main
