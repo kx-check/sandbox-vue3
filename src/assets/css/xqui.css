@@ -1,0 +1,414 @@
+/*主件消息框*/
+
+.pug-message-box {
+    position: fixed;
+    top: 1px;
+    padding: 10px;
+    background: #111;
+    color: #fff;
+    left: 0;
+    right: 0;
+    max-width: 200px;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #eee;
+    text-align: center;
+    z-index: 101;
+    cursor: pointer
+}
+
+.pug-message-cuowu1 {
+    background: #ff4954
+}
+
+.pug-message-zhengque {
+    background: lightgreen;
+}
+
+.pug-message-jinggao {
+    background: lightyellow
+}
+
+
+/*pugdialog*/
+
+.pug-modal {
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, .85);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: "tnum", "tnum";
+    pointer-events: none;
+    position: relative;
+    top: 100px;
+    width: auto;
+    max-width: calc(100vw - 32px);
+    margin: 0 auto;
+    padding: 0 0 24px
+}
+
+.pug-modal.pug-zoom-enter,
+.pug-modal.antzoom-appear {
+    transform: none;
+    opacity: 0;
+    animation-duration: .3s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.pug-modal-mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .45)
+}
+
+.pug-modal-mask-hidden {
+    display: none
+}
+
+.pug-modal-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    outline: 0;
+    -webkit-overflow-scrolling: touch
+}
+
+.pug-modal-wrap {
+    z-index: 1000
+}
+
+.pug-modal-title {
+    margin: 0;
+    color: rgba(0, 0, 0, .85);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    word-wrap: break-word
+}
+
+.pug-modal-content {
+    position: relative;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px -4px rgba(0, 0, 0, .12), 0 6px 16px 0 rgba(0, 0, 0, .08), 0 9px 28px 8px rgba(0, 0, 0, .05);
+    pointer-events: auto
+}
+
+.pug-modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    padding: 0;
+    color: rgba(0, 0, 0, .45);
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    background: 0 0;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: color .3s
+}
+
+.pug-modal-close-x {
+    display: block;
+    width: 56px;
+    height: 56px;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 56px;
+    text-align: center;
+    text-transform: none;
+    text-rendering: auto
+}
+
+.pug-modal-close:focus,
+.pug-modal-close:hover {
+    color: rgba(0, 0, 0, .75);
+    text-decoration: none
+}
+
+.pug-modal-header {
+    padding: 16px 24px;
+    color: rgba(0, 0, 0, .85);
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 2px 2px 0 0
+}
+
+.pug-modal-body {
+    padding: 24px;
+    font-size: 14px;
+    line-height: 1.5715;
+    word-wrap: break-word
+}
+
+.pug-modal-footer {
+    padding: 10px 16px;
+    text-align: right;
+    background: 0 0;
+    border-top: 1px solid #f0f0f0;
+    border-radius: 0 0 2px 2px
+}
+
+.pug-modal-footer .pug-btn+.pug-btn:not(.pug-dropdown-trigger) {
+    margin-bottom: 0;
+    margin-left: 8px
+}
+
+.pug-modal-open {
+    overflow: hidden
+}
+
+.pug-modal-centered {
+    text-align: center
+}
+
+.pug-modal-centered:before {
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+    content: ""
+}
+
+.pug-modal-centered .pug-modal {
+    top: 0;
+    display: inline-block;
+    padding-bottom: 0;
+    text-align: left;
+    vertical-align: middle
+}
+
+@media(max-width:767px) {
+    .pug-modal {
+        max-width: calc(100vw - 16px);
+        margin: 8px auto
+    }
+    .pug-modal-centered .pug-modal {
+        flex: 1 1
+    }
+}
+
+.pug-modal-confirm .pug-modal-header {
+    display: none
+}
+
+.pug-modal-confirm .pug-modal-body {
+    padding: 32px 32px 24px
+}
+
+.pug-modal-confirm-body-wrapper:before {
+    display: table;
+    content: ""
+}
+
+.pug-modal-confirm-body-wrapper:after {
+    display: table;
+    clear: both;
+    content: ""
+}
+
+.pug-modal-confirm-body .pug-modal-confirm-title {
+    display: block;
+    overflow: hidden;
+    color: rgba(0, 0, 0, .85);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4
+}
+
+.pug-modal-confirm-body .pug-modal-confirm-content {
+    margin-top: 8px;
+    color: rgba(0, 0, 0, .85);
+    font-size: 14px
+}
+
+.pug-modal-confirm-body>.anticon {
+    float: left;
+    margin-right: 16px;
+    font-size: 22px
+}
+
+.pug-modal-confirm-body>.anticon+.pug-modal-confirm-title+.pug-modal-confirm-content {
+    margin-left: 38px
+}
+
+.pug-modal-confirm .pug-modal-confirm-btns {
+    float: right;
+    margin-top: 24px
+}
+
+.pug-modal-confirm .pug-modal-confirm-btns .pug-btn+.pug-btn {
+    margin-bottom: 0;
+    margin-left: 8px
+}
+
+.pug-modal-confirm-error .pug-modal-confirm-body>.anticon {
+    color: #ff4d4f;
+    color: var(--pug-error-color)
+}
+
+.pug-modal-confirm-confirm .pug-modal-confirm-body>.anticon,
+.pug-modal-confirm-warning .pug-modal-confirm-body>.anticon {
+    color: #faad14;
+    color: var(--pug-warning-color)
+}
+
+.pug-modal-confirm-info .pug-modal-confirm-body>.anticon {
+    color: #1890ff;
+    color: var(--pug-info-color)
+}
+
+.pug-modal-confirm-success .pug-modal-confirm-body>.anticon {
+    color: #52c41a;
+    color: var(--pug-success-color)
+}
+
+.pug-modal-wrap-rtl {
+    direction: rtl
+}
+
+.pug-modal-wrap-rtl .pug-modal-close {
+    right: auto;
+    left: 0
+}
+
+.pug-modal-wrap-rtl .pug-modal-footer {
+    text-align: left
+}
+
+.pug-modal-wrap-rtl .pug-modal-footer .pug-btn+.pug-btn {
+    margin-right: 8px;
+    margin-left: 0
+}
+
+.pug-modal-wrap-rtl .pug-modal-confirm-body {
+    direction: rtl
+}
+
+.pug-modal-wrap-rtl .pug-modal-confirm-body>.anticon {
+    float: right;
+    margin-right: 0;
+    margin-left: 16px
+}
+
+.pug-modal-wrap-rtl .pug-modal-confirm-body>.anticon+.pug-modal-confirm-title+.pug-modal-confirm-content {
+    margin-right: 38px;
+    margin-left: 0
+}
+
+.pug-modal-wrap-rtl .pug-modal-confirm-btns {
+    float: left
+}
+
+.pug-modal-wrap-rtl .pug-modal-confirm-btns .pug-btn+.pug-btn {
+    margin-right: 8px;
+    margin-left: 0
+}
+
+.pug-modal-wrap-rtl.pug-modal-centered .pug-modal {
+    text-align: right
+}
+
+.pug-btn,
+.pug-btn:active,
+.pug-btn:focus {
+    outline: 0;
+}
+
+.pug-btn {
+    line-height: 1.5715;
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    background-image: none;
+    box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
+    cursor: pointer;
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+    height: 32px;
+    padding: 4px 15px;
+    font-size: 14px;
+    border-radius: 2px;
+    color: rgba(0, 0, 0, .85);
+    border: 1px solid #d9d9d9;
+    background: #fff;
+}
+
+.pug-btn-primary {
+    color: #fff;
+    border-color: #1890ff;
+    background: #1890ff;
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+    box-shadow: 0 2px 0 rgb(0 0 0 / 5%);
+}
+
+.pug-btn-primary:focus,
+.pug-btn-primary:hover {
+    color: #fff;
+    border-color: #40a9ff;
+    background: #40a9ff;
+}
+
+.min-he-screen-10 {
+    min-height: 10vh;
+}
+
+.min-he-screen-20 {
+    min-height: 20vh;
+}
+
+.min-he-screen-30 {
+    min-height: 30vh;
+}
+
+.min-he-screen-40 {
+    min-height: 40vh;
+}
+
+.min-he-screen-50 {
+    min-height: 50vh;
+}
+
+.min-he-screen-60 {
+    min-height: 60vh;
+}
+
+.min-he-screen-70 {
+    min-height: 70vh;
+}
+
+.min-he-screen-80 {
+    min-height: 80vh;
+}
+
+.min-he-screen-90 {
+    min-height: 90vh;
+}
+
+.min-he-screen-100 {
+    min-height: 100vh;
+}
