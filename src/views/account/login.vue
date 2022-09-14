@@ -33,11 +33,6 @@
                         @click="handleLoginSubmit">登 录
                     </el-button>
                 </el-form-item>
-                <el-form-item>
-                    <el-button round color="#626aef" class="w-[250px]" type="primary" :loading="loading"
-                        @click="handleDingTalkLogin">钉钉登录
-                    </el-button>
-                </el-form-item>
             </el-form>
         </el-col>
         <el-col :lg="15" :md="12" class="admin-login-right">

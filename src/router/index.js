@@ -19,6 +19,36 @@ const routes = [
       },
     },
   },
+  {
+    path: '/',
+    name: 'home',
+    component: () => import('@/layouts/index.vue'),
+    meta: {
+      title: '首页',
+      beforeResolve(routeTo, routeFrom, next) {
+        // If the user is already logged in
+        // if (store.getters["auth/loggedIn"]) {
+        // Redirect to the home page instead
+        //   next({ name: "default" });
+        // } else {
+        // Continue to the login page
+        next()
+        // }
+      },
+    },
+  },
+  {
+    path: '/404',
+    component: () => import('@/views/error/404.vue'),
+    name: '404',
+    meta: {
+      isAuth: true,
+    },
+  },
+  // {
+  //   path: '*',
+  //   redirect: '/404',
+  // },
 ]
 
 const router = createRouter({
